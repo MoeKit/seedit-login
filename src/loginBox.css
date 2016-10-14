@@ -667,16 +667,16 @@ button.x-btn.x-btn-mini, input[type="submit"].x-btn.x-btn-mini {
 
 @font-face {
     font-family: 'iconfont';
-    src: url('http://at.alicdn.com/t/font_1385445457_1809516.eot'); /* IE9*/
-    src: url('http://at.alicdn.com/t/font_1385445457_1809516.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('http://at.alicdn.com/t/font_1385445457_3880215.woff') format('woff'), /* chrome、firefox */ url('http://at.alicdn.com/t/font_1385445457_0878074.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('http://at.alicdn.com/t/font_1385445457_4335415.svg#svgFontName') format('svg'); /* iOS 4.1- */
+    src: url('//at.alicdn.com/t/font_1385445457_1809516.eot'); /* IE9*/
+    src: url('//at.alicdn.com/t/font_1385445457_1809516.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('//at.alicdn.com/t/font_1385445457_3880215.woff') format('woff'), /* chrome、firefox */ url('//at.alicdn.com/t/font_1385445457_0878074.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('//at.alicdn.com/t/font_1385445457_4335415.svg#svgFontName') format('svg'); /* iOS 4.1- */
 }
 
 /*alert icons*/
 
 @font-face {
     font-family: 'iconfont';
-    src: url('http://at.alicdn.com/t/font_1385445457_1809516.eot'); /* IE9*/
-    src: url('http://at.alicdn.com/t/font_1385445457_1809516.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('http://at.alicdn.com/t/font_1385445457_3880215.woff') format('woff'), /* chrome、firefox */ url('http://at.alicdn.com/t/font_1385445457_0878074.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('http://at.alicdn.com/t/font_1385445457_4335415.svg#svgFontName') format('svg'); /* iOS 4.1- */
+    src: url('//at.alicdn.com/t/font_1385445457_1809516.eot'); /* IE9*/
+    src: url('//at.alicdn.com/t/font_1385445457_1809516.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('//at.alicdn.com/t/font_1385445457_3880215.woff') format('woff'), /* chrome、firefox */ url('//at.alicdn.com/t/font_1385445457_0878074.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('//at.alicdn.com/t/font_1385445457_4335415.svg#svgFontName') format('svg'); /* iOS 4.1- */
 }
 
 .alert-icon {
