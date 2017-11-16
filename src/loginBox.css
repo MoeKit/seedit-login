@@ -22,7 +22,7 @@
     top:50%;
     margin:-130px 0 0 -250px;
     display: none;
-    z-index: 9999999;
+    z-index: 999;
     /* http://ued.taobao.com/blog/2011/04/onfocus-this-blur/ */
 }
 

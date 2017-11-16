@@ -20,7 +20,7 @@ var loginBox;
 
 	if(!window.initGeetest){
 	    var script = document.createElement('script');
-	    script.src = 'http://static.geetest.com/static/tools/gt.js';
+	    script.src = '//static.geetest.com/static/tools/gt.js';
 	    document.body.appendChild( script );
 	}
 	//防止$被重定义
@@ -368,7 +368,7 @@ var loginBox;
 	    var _this = this;
 	    // 刷新验证码
 	    _this.$captcha.off('click').on('click', function() {
-	        $(this).attr('src', 'http://bbs.' + Config.getMainDomain() + '/restful/misc/captcha.json?token=' + _this.token + '&timestamp=' + (new Date().getTime()));
+	        $(this).attr('src', window.location.protocol + '//bbs.' + Config.getMainDomain() + '/restful/misc/captcha.json?token=' + _this.token + '&timestamp=' + (new Date().getTime()));
 	    });
 
 	    // 已经有token
@@ -382,7 +382,9 @@ var loginBox;
 	        (function(_this) {
 	        setTimeout(function() {
 	            // 检查是否需要验证码
-	            API.put('ucenter/login', function(data) {
+	            API.get('ucenter/login', {
+	            	__method: 'PUT'
+	            }, function(data) {
 	                if (data.data && data.data.need_code === 1) {
 	                    // 需要验证码
 	                    _this.shouldValidate = true;
@@ -395,7 +397,7 @@ var loginBox;
 	                        _this.$captcha.attr('src', img);
 	                    } else {
 	                        // 获取token
-	                        API.get('http://bbs.' + Config.getMainDomain() + '/restful/misc/token.jsonp', {
+	                        API.get(window.location.protocol + '//bbs.' + Config.getMainDomain() + '/restful/misc/token.jsonp', {
 	                            type: 'member_login'
 	                        }, function(data) {
 	                            if (data.data && data.data.token === '') {
@@ -409,14 +411,16 @@ var loginBox;
 	                        }, function(error) {});
 	                    }
 	                }
-	            }, function(error) {});
+	            }, function(error) {
+	            	alert('ucenter/login-put, 网络异常')
+	            });
 	        }, 0);
 	    })(_this);
 	    }
 	};
 
 	function buildUrl(token) {
-	    return 'http://bbs.' + Config.getMainDomain() + '/restful/misc/captcha.json?token=' + token + '&timestamp=' + (new Date().getTime());
+	    return window.location.protocol + '//bbs.' + Config.getMainDomain() + '/restful/misc/captcha.json?token=' + token + '&timestamp=' + (new Date().getTime());
 	};
 
 	if (window.showLoader === true) {
